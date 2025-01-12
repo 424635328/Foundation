@@ -1,0 +1,40 @@
+{
+  "lazyCodeLoading": "requiredComponents",
+  "pages": [
+    "pages/catAtlas/catAtlas",
+    "pages/catEye/catEye",
+    "pages/cat/cat",
+    "pages/recognitionResult/recognitionResult",
+    "pages/sponsor/sponsor",
+    "pages/catDetail/catDetail",
+    "pages/uploadCat/uploadCat",
+    "pages/catList/catList"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "流浪猫识别"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/catAtlas/catAtlas",
+        "text": "猫谱",
+        "iconPath": "images/catAtlas.png",
+        "selectedIconPath": "images/catAtlas_selected.png"
+      },
+      {
+        "pagePath": "pages/catEye/catEye",
+        "text": "猫眼",
+        "iconPath": "images/catEye.png",
+        "selectedIconPath": "images/catEye_selected.png"
+      },
+      {
+        "pagePath": "pages/cat/cat",
+        "text": "猫",
+        "iconPath": "images/cat.png",
+        "selectedIconPath": "images/cat_selected.png"
+      }
+    ]
+  }
+}

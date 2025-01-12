@@ -1,0 +1,27 @@
+<!-- pages/recognitionResult/recognitionResult.wxml -->
+<view class="container">
+  <view class="image-section">
+    <image class="captured-image" src="{{capturedImage}}" mode="aspectFit"></image>
+  </view>
+
+  <view class="result-section" wx:if="{{recognitionResult}}">
+    <view class="result-title">识别结果</view>
+    <view class="result-item" wx:if="{{recognitionResult.confidence > 0.5}}">
+      <view class="cat-name">{{recognizedCat.name}}</view>
+      <view class="confidence">置信度: {{recognitionResult.confidence * 100}}%</view>
+      <view class="description">
+        {{recognizedCat.description}}
+      </view>
+      <button bindtap="navigateToCatDetail">查看详情</button>
+    </view>
+    <view class="result-item" wx:else>
+      <view>未识别到猫咪</view>
+      <view>请尝试重新拍摄或上传更清晰的图片</view>
+    </view>
+  </view>
+
+  <view class="loading" wx:if="{{!recognitionResult}}">
+    <text>识别中...</text>
+    <progress percent="50" active stroke-width="6" />
+  </view>
+</view>

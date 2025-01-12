@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20rpx;
+}
+
+.cat-image {
+  width: 750rpx;
+  height: 446rpx;
+  display: block;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-size: 25rpx;
+  color: #333;
+  font-weight: bold;
+  width: 200rpx;
+  text-align: right; /* 将标签文字右对齐 */
+}
+
+.value {
+  font-size: 24rpx;
+  color: #666;
+  margin-left: 3rpx; /* 添加左右间距 */
+  word-break: break-all; /*  允许文字自动换行 */
+}

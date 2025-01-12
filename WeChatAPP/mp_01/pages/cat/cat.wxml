@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="user-info">
+    <image wx:if="{{userInfo}}" class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFit" style="position: relative; left: 87rpx; top: 94rpx"></image>
+    <view wx:if="{{userInfo}}" class="user-name" style="position: relative; left: -115rpx; top: 244rpx">{{userInfo.nickName}}</view>
+    <button wx:else bindtap="onLogin">登录</button>
+  </view>
+
+  <view class="sponsor-section" style="width: 647rpx; height: 265rpx; display: flex; box-sizing: border-box">
+    <view class="title" style="position: relative; left: 0rpx; top: 497rpx">支持我们</view>
+    <button class="sponsor-button" bindtap="navigateToSponsor" style="position: relative; left: 0rpx; top: 497rpx; width: 270rpx; height: 162rpx; display: block; box-sizing: border-box">
+      投喂赞助
+    </button>
+  </view>
+
+  <view class="function-buttons">
+    <button class="function-button" bindtap="uploadCatInfo">上传猫咪信息</button>
+    <button class="function-button" bindtap="viewAllCats">查看所有猫咪</button>
+  </view>
+
+</view>

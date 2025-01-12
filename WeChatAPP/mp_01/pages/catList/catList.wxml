@@ -1,0 +1,17 @@
+<!-- pages/catList/catList.wxml -->
+<view class="container">
+  <view class="search-bar">
+    <icon type="search" size="18" color="#ccc"></icon>
+    <input placeholder="搜索猫咪名字" bindinput="onSearchInput" />
+  </view>
+
+  <view class="cat-list">
+    <view class="cat-item" wx:for="{{cats}}" wx:key="index" data-name="{{item.name}}" bindtap="navigateToCatDetail"> 
+      <image class="cat-image" src="{{item.imageUrl}}" mode="aspectFill" data-name="{{item.name}}" bindtap="navigateToCatDetail" />
+      <view class="cat-info">
+        <view class="cat-name" data-name="{{item.name}}" bindtap="navigateToCatDetailByName">{{item.name}}</view> 
+        <view class="cat-location">📍 {{item.location}}</view>
+      </view>
+    </view>
+  </view>
+</view>

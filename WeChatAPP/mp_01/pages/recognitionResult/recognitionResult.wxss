@@ -1,0 +1,26 @@
+.container {
+  padding: 20rpx;
+}
+
+.image-container {
+  margin-bottom: 20rpx;
+}
+
+.image-title {
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.result {
+  margin-top: 20rpx;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.item text {
+  margin-left: 10rpx;
+}

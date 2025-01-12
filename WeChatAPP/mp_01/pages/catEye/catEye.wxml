@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="title" style="position: relative; left: 0rpx; top: -10rpx">猫脸识别</view>
+  <view class="cat-image-container" style="width: 704rpx; height: 704rpx; display: flex; box-sizing: border-box">
+    <image style="position: relative; left: 0rpx; top: 0rpx; width: 704rpx; height: 657rpx; display: block; box-sizing: border-box" 
+      src="{{randomCat.imageUrl}}"  
+      mode="aspectFit" 
+      class="cat-image" 
+      data-name="{{randomCat.name}}" 
+      bindtap="navigateToCatDetail"
+    /> 
+    <!--  <view class="cat-name">{{randomCat.name}}</view>  是否显示猫咪名字   -->
+  </view>  
+  <button class="take-photo-button" bindtap="takePhoto" style="position: relative; left: 0rpx; top: 38rpx">拍摄</button>
+</view>

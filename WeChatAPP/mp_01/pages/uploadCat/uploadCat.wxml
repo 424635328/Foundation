@@ -1,0 +1,45 @@
+<!-- pages/uploadCat/uploadCat.wxml -->
+<view class="container">
+  <form bindsubmit="submitForm">
+    <view class="form-group">
+      <label for="imageUrl">猫咪照片:</label>
+      <view class="upload-image">
+        <image wx:if="{{imageUrl}}" src="{{imageUrl}}" mode="aspectFill" />
+        <button wx:else type="primary" bindtap="chooseImage" style="position: relative; left: 233rpx; top: 0rpx; width: 200rpx; height: 118rpx; display: block; box-sizing: border-box">Upload</button>
+      </view>
+    </view>
+    <view class="form-group">
+      <label for="name">名字:</label>
+      <input type="text" id="name" name="name" value="{{name}}" placeholder="请输入猫咪名字" required />
+    </view>
+    <view class="form-group">
+      <label for="gender">性别:</label>
+      <picker bindchange="bindGenderChange" value="{{genderIndex}}" range="{{genderOptions}}">
+        <view class="picker-view">{{genderOptions[genderIndex]}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <label for="age">年龄:</label>
+      <input type="text" id="age" name="age" value="{{age}}" placeholder="请输入猫咪年龄" />
+    </view>
+    <view class="form-group">
+      <label for="sterilization">绝育情况:</label>
+      <picker bindchange="bindSterilizationChange" value="{{sterilizationIndex}}" range="{{sterilizationOptions}}">
+        <view class="picker-view">{{sterilizationOptions[sterilizationIndex]}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <label for="location">常驻地:</label>
+      <input type="text" id="location" name="location" value="{{location}}" placeholder="请输入猫咪常驻地" />
+    </view>
+    <view class="form-group">
+      <label for="personality">性格:</label>
+      <textarea style="width: 704rpx; height: 218rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" id="personality" name="personality" value="{{personality}}" placeholder="请输入猫咪性格" />
+    </view>
+    <view class="form-group">
+      <label for="features">特征:</label>
+      <textarea style="width: 704rpx; height: 284rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" id="features" name="features" value="{{features}}" placeholder="请输入猫咪特征" />
+    </view>
+    <button type="primary" form-type="submit">提交</button>
+  </form>
+</view>
