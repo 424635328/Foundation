@@ -1,0 +1,5 @@
+﻿  Test.cpp
+E:\GitHub\Foundation\C_Project\Test.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+E:\GitHub\Foundation\C_Project\Test.cpp(34,70): warning C4474: printf: 格式字符串中传递的参数太多
+E:\GitHub\Foundation\C_Project\Test.cpp(34,70): message : 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+  C_Project.vcxproj -> E:\GitHub\Foundation\C_Project\x64\Debug\C_Project.exe
