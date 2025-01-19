@@ -1,15 +1,11 @@
-def ismultiplicand(n, m):
-    if n % m == 0:
-        return True
+def power_exponent(base, exponent):
+    result = 1
+    for i in range(exponent):
+        result *= base
+    return result
+
+for i in range(1, 11):
+    if power_exponent(14,i) -power_exponent(13,i)==27:
+        print(f"14^{i} - 13^{i} = 27")
     else:
-        return False
-a=0
-b=10
-for i in range(1,b):
-    if ismultiplicand(i, 3):
-        a+=1
-    elif ismultiplicand(i, 2):
-        continue
-    else:
-        continue
-print(a/b)
+        print('none')
