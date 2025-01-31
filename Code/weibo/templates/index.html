@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    {% if 'user_id' in session %}
+    <div class="post-form">
+        <form method="POST" action="{{ url_for('create_post') }}">
+            <textarea name="content" placeholder="分享新鲜事..." required></textarea>
+            <button type="submit">发布</button>
+        </form>
+    </div>
+    {% endif %}
+
+    <div class="posts">
+        {% for post in posts %}
+        <div class="post">
+            <div class="post-header">
+                <span class="username">{{ post.author.username }}</span>
+                <span class="timestamp">{{ post.timestamp.strftime('%Y-%m-%d %H:%M') }}</span>
+            </div>
+            <div class="post-content">
+                {{ post.content }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2>博客</h2>
+    <div class="blogs">
+        {% for blog in blogs %}
+        <div class="blog">
+            <div class="blog-header">
+                <h3>{{ blog.title }}</h3>
+                <span class="username">{{ blog.author.username }}</span>
+                <span class="timestamp">{{ blog.timestamp.strftime('%Y-%m-%d %H:%M') }}</span>
+            </div>
+            <div class="blog-content">
+                {{ blog.content }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

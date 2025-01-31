@@ -1,11 +1,47 @@
-def power_exponent(base, exponent):
-    result = 1
-    for i in range(exponent):
-        result *= base
-    return result
+import pygame
+import sys
 
-for i in range(1, 11):
-    if power_exponent(14,i) -power_exponent(13,i)==27:
-        print(f"14^{i} - 13^{i} = 27")
-    else:
-        print('none')
+# Initialize Pygame
+pygame.init()
+
+# Set up some constants
+WIDTH, HEIGHT = 640, 480
+BALL_RADIUS = 20
+SPEED = 2
+
+# Set up some colors
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+
+# Create the game window
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
+# Set up the ball's initial position and velocity
+x, y = WIDTH // 2, HEIGHT // 2
+vx, vy = SPEED, SPEED
+
+# Game loop
+while True:
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    # Move the ball
+    x += vx
+    y += vy
+
+    # Bounce off edges
+    if x - BALL_RADIUS < 0 or x + BALL_RADIUS > WIDTH:
+        vx = -vx
+    if y - BALL_RADIUS < 0 or y + BALL_RADIUS > HEIGHT:
+        vy = -vy
+
+    # Draw everything
+    screen.fill(WHITE)
+    pygame.draw.circle(screen, RED, (x, y), BALL_RADIUS)
+
+    # Update the display
+    pygame.display.flip()
+    pygame.time.Clock().tick(60)

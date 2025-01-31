@@ -1,0 +1,227 @@
+/* 基础样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* 导航栏 */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1da1f2;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links a:hover {
+    color: #1da1f2;
+}
+
+/* 发布表单 */
+.post-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+.post-form button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* 微博列表 */
+.posts {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.post:last-child {
+    border-bottom: none;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-weight: bold;
+    color: #1da1f2;
+}
+
+.timestamp {
+    color: #999;
+    font-size: 0.9em;
+}
+
+.post-content {
+    line-height: 1.5;
+}
+
+/* 认证表单 */
+.auth-form {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auth-form a {
+    color: #1da1f2;
+    text-decoration: none;
+}
+
+/* 消息提示 */
+.flash-messages {
+    margin-bottom: 20px;
+}
+
+.flash {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.flash.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.flash.error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    margin-top: 40px;
+}
+
+/* 博客样式 */
+.blogs {
+    margin-top: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.blog {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.blog:last-child {
+    border-bottom: none;
+}
+
+.blog-header {
+    margin-bottom: 15px;
+}
+
+.blog-header h3 {
+    margin: 0 0 5px 0;
+    color: #1da1f2;
+}
+
+.blog-header .username {
+    font-weight: bold;
+    color: #1da1f2;
+}
+
+.blog-header .timestamp {
+    color: #999;
+    font-size: 0.9em;
+}
+
+.blog-content {
+    line-height: 1.6;
+    white-space: pre-wrap;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}

@@ -54,13 +54,22 @@ def apply_model(file_path, model_path, sequence_length=24):
 
     # 创建时间序列数据
     def create_sequences(data, seq_length):
+        # 初始化两个空列表，用于存储输入序列和目标值
         xs = []
         ys = []
+        # 遍历数据，生成序列
+        # 注意这里循环的终止条件是 len(data) - seq_length - 1
+        # 这样可以确保每个序列都有足够的长度，并且每个序列后面都有一个目标值
         for i in range(len(data) - seq_length - 1):
+            # 从数据中提取长度为 seq_length 的序列作为输入
             x = data[i:(i + seq_length)]
+            # 提取序列后面的一个数据点作为目标值
             y = data[i + seq_length]
+            # 将输入序列添加到 xs 列表中
             xs.append(x)
+            # 将目标值添加到 ys 列表中
             ys.append(y)
+        # 将输入序列列表和目标值列表转换为 NumPy 数组，并返回
         return np.array(xs), np.array(ys)
 
     X, y = create_sequences(data, sequence_length)
